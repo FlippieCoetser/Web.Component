@@ -80,7 +80,7 @@ describe('Given Component imported', () => {
                         Utils.removeTemplate(UI.tag)
                     })
                     it('Then one HTML Template should exist in DOM', () => {
-                        expect(document.getElementsByTagName('template').length).toEqual(1)
+                        expect(document.getElementsByTagName('template')).toHaveSize(1)
                     })
                     describe('Given component added to DOM', () => {
                         let component: UI;
@@ -98,6 +98,25 @@ describe('Given Component imported', () => {
                         })
                         it('Then component._hasTemplate should be true', () => {
                             expect(component['_hasTemplate']()).toBe(true)
+                        })
+                    })
+                })
+                describe('Given no HTML Template added to DOM', () => {
+                    it('Then no HTML Template should exist in DOM', () => {
+                        expect(document.getElementsByTagName('template')).toHaveSize(0)
+                    })
+                    describe('Given new component initialized', () => {
+                        let component: UI
+                        beforeEach(() => {
+                            component = new UI()
+                        })
+                        afterEach(() => {
+                            component.remove()
+                        })
+                        describe('When invoking connectedCallback', () => {})
+                        it('Then an missing template error should be thrown', () => {
+                            expect(() => component['connectedCallback']())
+                                .toThrowError(`Missing Template: No element with Id: ${UI.tag}, found`)
                         })
                     })
                 })
