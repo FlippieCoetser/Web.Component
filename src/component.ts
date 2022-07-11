@@ -34,6 +34,13 @@ export default abstract class Component extends HTMLElement {
     public template: Template;
 
     /**
+    * @hidden
+    */
+    constructor() {
+        super()
+    }
+
+    /**
     * Base component by default does not use an HTML Template 
     * @readonly
     * @category Attributes
