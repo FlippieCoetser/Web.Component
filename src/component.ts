@@ -2,7 +2,7 @@
 * @module Base
 */
 
-import Template from "./template.js";
+import { Template } from "./template.js";
 import { Tag } from "./enums/enum.tag.js";
 
 export { Gesture } from "./enums/enum.gesture.js"
@@ -10,7 +10,7 @@ export { Tag } from "./enums/enum.tag.js"
 /**
 * @category Base
 */
-export default abstract class Component extends HTMLElement { 
+export abstract class Component extends HTMLElement { 
     public static get attributes(): any {return []}
     
     /**

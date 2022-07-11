@@ -1,7 +1,7 @@
 import { Utils } from "../src/utils.js";
 
 // Template Unit Tests
-import Template, { Configuration  } from "../src/template.js";
+import  { Template, Configuration  } from "../src/template.js";
 
 const root = document.body.attachShadow({mode: 'open'})
 

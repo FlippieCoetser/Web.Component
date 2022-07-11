@@ -1,8 +1,7 @@
-import Validate from './validation.js'
-
 /**
 * @module Base
 */
+import Validate from './validation.js'
 
 export interface Configuration {
     id: string;
@@ -13,7 +12,7 @@ export interface Configuration {
 * HTML Template with configuration validation
 * @category Base
 */
-export default class Template {
+export class Template {
     static validateConfiguration = (configuration: Configuration) => 
         Validate.exist(configuration, 'id') && 
         Validate.type(configuration.id, 'string') ||

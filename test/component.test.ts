@@ -1,7 +1,7 @@
 import { Utils } from "../src/utils.js";
 
 // Component Unit Tests
-import Component, { Tag, Gesture} from "../src/component.js";
+import  { Component, Tag, Gesture} from "../src/component.js";
 
 describe('Given Component imported', () => {
     it('Then Component should be defined', () => {
