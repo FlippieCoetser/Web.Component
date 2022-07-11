@@ -7,6 +7,7 @@
 * @category Configuration  
 */
 export enum Tag {
+    Test = 'component-test',
     Pin = 'button-pin',
     Restore = 'button-restore',
     Maximize = 'button-maximize',
