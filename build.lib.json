@@ -7,10 +7,13 @@
         "rootDir": "./src",
         "outDir": "./lib/",
         "paths": {
-            "calculator": ["./src/Calculator.js"]
+            "@browser-modules/web.component": ["./src/calculator.js"]
         }
     },
     "include": [
         "./src/**/*"
+    ],
+    "exclude": [
+        "./src/utils.ts"
     ]
 }
