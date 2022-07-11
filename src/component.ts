@@ -110,10 +110,10 @@ export default abstract class Component extends HTMLElement {
 
     private _loadTemplate = () => {
         this._addShadowRoot();
-            this.template = new Template({
-                id: this.templateId,
-                root: this.root
-            })
+        this.template = new Template({
+            id: this.templateId,
+            root: this.root
+        })
     }
     private _addTemplate = () =>
         this._hasTemplate() && this._loadTemplate(); 
