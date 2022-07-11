@@ -3,6 +3,8 @@
 */
 import Template from "./template.js";
 import { Tag } from "./enums/enum.tag.js";
+export { Gesture } from "./enums/enum.gesture.js";
+export { Tag } from "./enums/enum.tag.js";
 /**
 * @category Base
 */

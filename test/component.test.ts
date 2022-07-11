@@ -1,11 +1,7 @@
 import { Utils } from "../src/utils.js";
 
-// Enumerations
-import { Tag } from "../src/enums/enum.tag.js";
-import { Gesture } from "../src/enums/enum.gesture.js"
-
 // Component Unit Tests
-import Component from "../src/component.js";
+import Component, { Tag, Gesture} from "../src/component.js";
 
 describe('Given Component imported', () => {
     it('Then Component should be defined', () => {
