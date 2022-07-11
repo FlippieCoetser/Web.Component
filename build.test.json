@@ -11,6 +11,10 @@
         "./test/**/*"
     ],
     "typedocOptions" :{
+        "entryPoints": [
+            "./src/component.ts", 
+            "./src/template.ts"
+        ],
         "excludePrivate": true,
         "excludeProtected": true,
         "disableSources": true,
