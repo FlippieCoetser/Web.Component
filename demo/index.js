@@ -1,3 +1,15 @@
-import { Calculator } from 'calculator';
-console.log(`Import module: Calculator`)
-console.log(`Use module: 1 + 2 = ${Calculator.Add(1, 2)}`); 
+import Component, {Gesture} from '@browser-modules/web.component'
+
+class Test extends Component {
+    configuration = {
+        gestures: [
+            {
+                event: Gesture.CLICK,
+                operation: 'one'
+            }
+        ]
+    }
+    one  = () => console.log('Operation.ONE')
+}
+
+customElements.define(Test.tag, Test);
