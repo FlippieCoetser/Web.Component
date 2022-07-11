@@ -101,25 +101,6 @@ describe('Given Component imported', () => {
                         })
                     })
                 })
-                describe('Given no HTML Template added to DOM', () => {
-                    it('Then no HTML Template should exist in DOM', () => {
-                        expect(document.getElementsByTagName('template')).toHaveSize(0)
-                    })
-                    describe('Given new component initialized', () => {
-                        let component: UI
-                        beforeEach(() => {
-                            component = new UI()
-                        })
-                        afterEach(() => {
-                            component.remove()
-                        })
-                        describe('When invoking connectedCallback', () => {})
-                        it('Then an missing template error should be thrown', () => {
-                            expect(() => component['connectedCallback']())
-                                .toThrowError(`Missing Template: No element with Id: ${UI.tag}, found`)
-                        })
-                    })
-                })
             })
         }) 
     })
