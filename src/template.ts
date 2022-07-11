@@ -21,7 +21,7 @@ export default class Template {
         Validate.nodeType(configuration.root, Node.DOCUMENT_FRAGMENT_NODE)
     
     static verifyAvailability = (id: string) =>
-        document.getElementById(id) === null ? Template.throwMissingTemplateError(id): undefined
+        document.getElementById(id) === null && Template.throwMissingTemplateError(id)
     
     static getById = (id:string): HTMLTemplateElement =>
         document.getElementById(id) as HTMLTemplateElement
