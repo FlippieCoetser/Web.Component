@@ -19,7 +19,8 @@
     "document": "npx typedoc --tsconfig build.test.json",
     "prestart": "npm run build.lib",
     "start": "http-server -a 127.0.0.1 -o /demo",
-    "postinstall": "node ./tasks/injectImportmap.mjs"
+    "postinstall": "node ./tasks/injectImportmap.mjs",
+    "prepublish": "npm run build.lib"
   },
   "repository": {
     "type": "git",
