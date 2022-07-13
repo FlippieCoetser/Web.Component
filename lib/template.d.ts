@@ -1,6 +1,3 @@
-/**
-* @module Base
-*/
 export interface Configuration {
     id: string;
     root: ShadowRoot;
@@ -9,7 +6,7 @@ export interface Configuration {
 * HTML Template with configuration validation
 * @category Base
 */
-export default class Template {
+export declare class Template {
     configuration: Configuration;
     static validateConfiguration: (configuration: Configuration) => any;
     static verifyAvailability: (id: string) => boolean;

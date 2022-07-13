@@ -1,14 +1,14 @@
 /**
 * @module Base
 */
-import Template from "./template.js";
+import { Template } from "./template.js";
 import { Tag } from "./enums/enum.tag.js";
 export { Gesture } from "./enums/enum.gesture.js";
 export { Tag } from "./enums/enum.tag.js";
 /**
 * @category Base
 */
-export default abstract class Component extends HTMLElement {
+export declare abstract class Component extends HTMLElement {
     static get attributes(): any;
     /**
      * Standard Web Component lifecycle method which returns a list of attributes in DOM to observe
@@ -20,6 +20,10 @@ export default abstract class Component extends HTMLElement {
     configuration: any;
     root: ShadowRoot;
     template: Template;
+    /**
+    * @hidden
+    */
+    constructor();
     /**
     * Base component by default does not use an HTML Template
     * @readonly
