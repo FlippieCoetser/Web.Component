@@ -10,7 +10,7 @@ export { Tag } from "./enums/enum.tag.js"
 /**
 * @category Base
 */
-export abstract class Component extends HTMLElement { 
+export class Component extends HTMLElement { 
     public static get attributes(): any {return []}
     
     /**
