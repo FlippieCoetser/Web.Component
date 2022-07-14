@@ -1,9 +1,9 @@
 {
   "name": "@browser-modules/web.component",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "ES6 Module based Web Component",
-  "browser": "lib/component.js",
-  "types": "lib/component.d.ts",
+  "browser": "./lib/component.js",
+  "types": "./lib/component.d.ts",
   "files": [
     "lib/",
     "tasks/"	
