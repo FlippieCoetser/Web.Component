@@ -84,10 +84,6 @@ export class Component extends HTMLElement {
             break;
         };
     }
-                
-    private _addEventHandlers = () => 
-        this.configuration?.gestures?.forEach(this._addEventHandler)
-    
     private _addEventHandler = ({event, operation, parameters}, index, arr) => { 
         arr[index] = {
             event: event,
@@ -96,7 +92,10 @@ export class Component extends HTMLElement {
             handler: (event) => this[operation]()
         }
     }
-
+                
+    private _addEventHandlers = () => 
+        this.configuration?.gestures?.forEach(this._addEventHandler)
+    
     /**
      * Bind UI Gestures: Mouse and Touchscreen, to Component Operations
      * TODO: Add gestures and gesture type signature
