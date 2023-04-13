@@ -9,6 +9,11 @@
 export enum Tag {
     Test = 'component-test',
     Pin = 'button-pin',
+    Dots = 'button-dots',
+    Left = 'button-left',
+    Right = 'button-right',
+    Up = 'button-up',
+    Down = 'button-down',
     Restore = 'button-restore',
     Maximize = 'button-maximize',
     Minimize = 'button-minimize',

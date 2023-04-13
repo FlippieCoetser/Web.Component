@@ -8,7 +8,7 @@ export { Tag } from "./enums/enum.tag.js";
 /**
 * @category Base
 */
-export declare abstract class Component extends HTMLElement {
+export declare class Component extends HTMLElement {
     static get attributes(): any;
     /**
      * Standard Web Component lifecycle method which returns a list of attributes in DOM to observe
@@ -45,8 +45,8 @@ export declare abstract class Component extends HTMLElement {
     * @hidden
     */
     attributeChangedCallback(attribute: string, oldValue: string, newValue: string): void;
-    private _addEventHandlers;
     private _addEventHandler;
+    private _addEventHandlers;
     /**
      * Bind UI Gestures: Mouse and Touchscreen, to Component Operations
      * TODO: Add gestures and gesture type signature
