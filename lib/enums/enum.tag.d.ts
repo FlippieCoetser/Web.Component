@@ -17,5 +17,8 @@ export declare enum Tag {
     Maximize = "button-maximize",
     Minimize = "button-minimize",
     Close = "button-close",
-    Header = "bar-header"
+    Header = "bar-header",
+    Hamburger = "button-hamburger",
+    Contents = "button-contents",
+    Fullscreen = "button-fullscreen"
 }
