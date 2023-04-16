@@ -21,5 +21,6 @@ export enum Tag {
     Header = 'bar-header',
     Hamburger = 'button-hamburger',
     Contents = 'button-contents',
-    Fullscreen = 'button-fullscreen'
+    Fullscreen = 'button-fullscreen',
+    Taskbar = 'task-bar',
 }
