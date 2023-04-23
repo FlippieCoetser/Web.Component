@@ -1,13 +1,13 @@
 /**
-* @module Base
-*/
+ * @module Base
+ */
 import { Template } from "./template.js";
-import { Tag } from "./enums/enum.tag.js";
+import { Tag as OldTag } from "./enums/enum.tag.js";
 export { Gesture } from "./enums/enum.gesture.js";
 export { Tag } from "./enums/enum.tag.js";
 /**
-* @category Base
-*/
+ * @category Base
+ */
 export declare class Component extends HTMLElement {
     static get attributes(): any;
     /**
@@ -15,20 +15,20 @@ export declare class Component extends HTMLElement {
      * @hidden
      */
     static get observedAttributes(): string[];
-    static get tag(): Tag;
+    static get tag(): OldTag;
     private static throwUndefinedComponent;
     configuration: any;
     root: ShadowRoot;
     template: Template;
     /**
-    * @hidden
-    */
+     * @hidden
+     */
     constructor();
     /**
-    * Base component by default does not use an HTML Template
-    * @readonly
-    * @category Attributes
-    */
+     * Base component by default does not use an HTML Template
+     * @readonly
+     * @category Attributes
+     */
     get templateId(): string;
     /**
      * Called after connection with DOM established
@@ -41,9 +41,9 @@ export declare class Component extends HTMLElement {
      */
     disconnectedCallback(): void;
     /**
-    * Triggers when attribute in this.attributes initial or subsequent value set.
-    * @hidden
-    */
+     * Triggers when attribute in this.attributes initial or subsequent value set.
+     * @hidden
+     */
     attributeChangedCallback(attribute: string, oldValue: string, newValue: string): void;
     private _addEventHandler;
     private _addEventHandlers;
