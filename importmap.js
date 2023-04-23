@@ -1,7 +1,7 @@
 const importmap = {
   imports: {
     "@browser-modules/component.library":
-      "./node_modules/@browser-modules/component.library/lib/*.js",
+      "./node_modules/@browser-modules/component.library/lib/library.js",
   },
 };
 

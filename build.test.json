@@ -5,7 +5,8 @@
     "target": "es2020",
     "moduleResolution": "node",
     "sourceMap": true,
-    "inlineSources": true
+    "inlineSources": true,
+    "baseUrl": "."
   },
   "include": ["./src/**/*", "./test/**/*"],
   "typedocOptions": {

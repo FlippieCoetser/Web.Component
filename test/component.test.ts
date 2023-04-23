@@ -2,6 +2,7 @@ import { Utils } from "../src/utils.js";
 
 // Component Unit Tests
 import { Component, Gesture } from "../src/component.js";
+import { Tag as NewTag } from "../node_modules/@browser-modules/component.library/lib/library.js";
 import { Tag } from "../src/enums/enum.tag.js";
 
 describe("Given Component imported", () => {

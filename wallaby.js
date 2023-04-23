@@ -1,6 +1,10 @@
 module.exports = function (wallaby) {
   return {
-    files: ["src/**/*.ts"],
+    files: [
+      "importmap.js",
+      "node_modules/@browser-modules/component.library/lib/**/*.js",
+      "src/**/*.ts",
+    ],
     tests: ["test/*.ts"],
     trace: true,
     compilers: {
@@ -9,7 +13,6 @@ module.exports = function (wallaby) {
         target: "es2020",
         sourceMap: true,
         inlineSources: true,
-        moduleResolution: "node",
       }),
     },
   };

@@ -7,8 +7,7 @@ import { Tag as OldTag } from "./enums/enum.tag.js";
 import { Tag } from "@browser-modules/component.library";
 
 export { Gesture } from "./enums/enum.gesture.js";
-export { Tag } from "./enums/enum.tag.js";
-export {};
+export { Tag } from "@browser-modules/component.library";
 /**
  * @category Base
  */
