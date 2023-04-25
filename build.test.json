@@ -17,6 +17,8 @@
     "categorizeByGroup": false,
     "sort": ["static-first", "visibility"],
     "name": "Boilerplate Web Component",
-    "hideGenerator": true
+    "hideGenerator": true,
+    "plugin": ["typedoc-plugin-merge-modules"],
+    "mergeModulesMergeMode": "module"
   }
 }

@@ -1,21 +1,29 @@
 /**
- * @module Base
+ * @module Component
  */
 import { Template } from "./template.js";
-import { Tag as OldTag } from "./enums/enum.tag.js";
 export { Gesture } from "./enums/enum.gesture.js";
-export { Tag } from "./enums/enum.tag.js";
+export { Tag } from "@browser-modules/component.library";
 /**
- * @category Base
+ * @category Component
  */
 export declare class Component extends HTMLElement {
+    /**
+     * When extending `Component`, override attributes.
+     * Return attributes to observe in DOM and set the appropriate return type
+     * @category Attributes
+     */
     static get attributes(): any;
     /**
      * Standard Web Component lifecycle method which returns a list of attributes in DOM to observe
      * @hidden
      */
     static get observedAttributes(): string[];
-    static get tag(): OldTag;
+    /**
+     * By convention component html tags are defined and stored in the component library.
+     * Providing the library has a tag defined for the component no error will be thrown.
+     */
+    static get tag(): any;
     private static throwUndefinedComponent;
     configuration: any;
     root: ShadowRoot;
@@ -26,6 +34,7 @@ export declare class Component extends HTMLElement {
     constructor();
     /**
      * Base component by default does not use an HTML Template
+     * Return Attribute.TEMPLATE or Default to component tag if template required
      * @readonly
      * @category Attributes
      */

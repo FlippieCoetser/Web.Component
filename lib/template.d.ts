@@ -3,9 +3,9 @@ export interface Configuration {
     root: ShadowRoot;
 }
 /**
-* HTML Template with configuration validation
-* @category Base
-*/
+ * HTML Template with configuration validation
+ * @category Component
+ */
 export declare class Template {
     configuration: Configuration;
     static validateConfiguration: (configuration: Configuration) => any;
