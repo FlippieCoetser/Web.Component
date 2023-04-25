@@ -1,19 +1,24 @@
 /**
- * @module Base
+ * @module Component
  */
 
 import { Template } from "./template.js";
-import { Tag as OldTag } from "./enums/enum.tag.js";
 import { Tag } from "@browser-modules/component.library";
 
 export { Gesture } from "./enums/enum.gesture.js";
 export { Tag } from "@browser-modules/component.library";
+
 /**
- * @category Base
+ * @category Component
  */
 export class Component extends HTMLElement {
+  /**
+   * When extending `Component`, override attributes.
+   * Return attributes to observe in DOM and set the appropriate return type
+   * @category Attributes
+   */
   public static get attributes(): any {
-    return [];
+    return {};
   }
 
   /**
@@ -21,15 +26,20 @@ export class Component extends HTMLElement {
    * @hidden
    */
   public static get observedAttributes(): string[] {
-    return Object.values(this.attributes);
+    return Object.keys(this.attributes);
   }
 
-  public static get tag(): OldTag {
-    return OldTag[this.name] ?? this.throwUndefinedComponent(this.name);
+  /**
+   * By convention component html tags are defined and stored in the component library.
+   * Providing the library has a tag defined for the component no error will be thrown.
+   */
+  public static get tag() {
+    let name = this.name.toUpperCase();
+    return Tag[name] ?? this.throwUndefinedComponent(name);
   }
 
   private static throwUndefinedComponent = (name): void => {
-    throw new Error(`Missing Definition: ${name} in enum Tag`);
+    throw new Error(`Undefined Component: Add ${name} to component library`);
   };
 
   public configuration: any;
@@ -45,6 +55,7 @@ export class Component extends HTMLElement {
 
   /**
    * Base component by default does not use an HTML Template
+   * Return Attribute.TEMPLATE or Default to component tag if template required
    * @readonly
    * @category Attributes
    */
@@ -80,7 +91,6 @@ export class Component extends HTMLElement {
     oldValue: string,
     newValue: string
   ): void {
-    // Manage attributes with Enums
     /* istanbul ignore next */
     switch (attribute) {
       case "default":
@@ -126,7 +136,10 @@ export class Component extends HTMLElement {
       root: this.root,
     });
   };
-  private _addTemplate = () => this._hasTemplate() && this._loadTemplate();
+  private _addTemplate = () => {
+    console.log(this.templateId);
+    this._hasTemplate() && this._loadTemplate();
+  };
 
   protected _render = () => {};
 }

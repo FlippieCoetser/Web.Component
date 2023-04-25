@@ -46,6 +46,6 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "@browser-modules/component.library": "^1.0.7"
+    "@browser-modules/component.library": "^1.0.9"
   }
 }
